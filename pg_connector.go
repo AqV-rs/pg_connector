@@ -1,4 +1,4 @@
-package db
+package pg_connector
 
 import (
 	"context"
