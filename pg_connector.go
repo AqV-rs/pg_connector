@@ -28,7 +28,7 @@ func InitDB() *pgxpool.Pool {
 		dbPort := os.Getenv("DB_PORT")
 		dbName := os.Getenv("DB_NAME")
 
-		dsn := fmt.Sprintf("postgres://%s:%s@%s:%s/%s", dbUser, dbPass, dbHost, dbPort, dbName)
+		dsn := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=disable", dbUser, dbPass, dbHost, dbPort, dbName)
 
 		if dsn == "postgres://::::" {
 			log.Fatal("DATABASE_URL не задан")
