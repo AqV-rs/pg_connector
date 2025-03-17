@@ -1,4 +1,4 @@
-module pg_connector
+module github.com/AqV-rs/pg_connector
 
 go 1.23.3
 
